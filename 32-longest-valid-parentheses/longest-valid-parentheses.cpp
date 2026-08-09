@@ -1,6 +1,7 @@
 class Solution {
 public:
     int longestValidParentheses(string s) {
+        // int n = s.size();
         // int l = 0;
         // int max_len = 0;
         // int curr = 0;
@@ -23,13 +24,25 @@ public:
 
         //     curr++; 
         // }
-        // while(open > close && l < s.size()-1){
-        //     if(s[l] == '(')open--;
-        //     else close--;
-        //     l++;
+        // l = n-1;
+        // curr = n-1;
+        // open = 0;
+        // close = 0;
+        // while(curr >= 0){
+        //     if(s[curr] == '(')open++;
+        //     else close ++;
+
         //     if(close == open){
-        //         max_len = max(max_len, curr - l);
+        //         max_len = max(max_len, l - curr + 1);
         //     }
+
+        //     if(close < open){
+        //         if(s[l] == '(')open--;
+        //         else close--;
+        //         l--;
+        //     }
+
+        //     curr--; 
         // }
         // return max_len;
         int n = s.size();
